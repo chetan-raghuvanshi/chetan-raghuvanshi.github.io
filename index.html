@@ -69,11 +69,10 @@
     </li>
     <li>
       <span class="item-title">Agent harness integrations.</span>
-      Hooked the tool-call lifecycle of Hermes, OpenClaw, Goose, Devin CLI, Factory Droid,
-      Antigravity, grok, Qwen Code, Cline and others into a 39-policy block / sanitize /
-      instruct engine. Verified against live CLIs rather than docs, which caught schema and
-      timeout-unit bugs the published specs missed. Audited the full policy × harness
-      matrix and found 26% of pairs were silently no-ops.
+      Hooked the tool-call lifecycle of Hermes, OpenClaw, Goose, Devin CLI, Factory Droid
+      and Antigravity into a 39-policy block / sanitize / instruct engine that now covers
+      12 harnesses. Verified against live CLIs rather than docs, which caught schema and
+      timeout-unit bugs the published specs missed.
     </li>
     <li>
       <span class="item-title">Transcript collector, in Rust.</span>
@@ -84,22 +83,18 @@
     <li>
       <span class="item-title">Daemon-to-cloud protocol.</span>
       Signed policy bundles, cursor-based spool-and-ack delivery for at-least-once event
-      shipping, and version-safe rollout; commit-SHA-pinned policy packs; end-to-end
-      request-id tracing from the edge through ClickHouse and the model gateway.
+      shipping, and version-safe rollout; policy packs pinned to commit SHAs.
     </li>
     <li>
       <span class="item-title">Evaluation infrastructure.</span>
       Policy backtesting that replays historical tool calls out of ClickHouse against
-      candidate policies before rollout; an isolated eval pod on Kubernetes; a pull-based
-      evaluator worker protocol (Rust server + SDK + sandboxed Python pod). Ran a 53-agent
-      adversarial sweep (458 probes) against it that surfaced 40 defects, all fixed with
-      regression tests.
+      candidate policies before rollout, and automated eval generation on an isolated
+      Kubernetes eval pod that pushes results back to the server.
     </li>
     <li>
-      <span class="item-title">Integration canary and drift detection.</span>
-      A daily CI canary that probes every supported CLI and reports to Slack, plus a
-      contract observer that records each CLI's hook payload shape and version, detects
-      drift, and auto-repairs config with backup, verify and rollback.
+      <span class="item-title">Integration canary.</span>
+      A daily CI canary that runs harmless probes against every supported agent CLI,
+      version-gates reruns, and reports pass / fail / inconclusive to Slack.
     </li>
     <li>
       <span class="item-title">Internal agents and alerting.</span>
@@ -115,7 +110,7 @@
   <ul class="plain">
     <li>
       <a class="item-title" href="https://github.com/Vijeta-Patel/Monk">Monk</a>
-      <span class="meta">· TypeScript · team project</span>
+      <span class="meta">· TypeScript</span>
       <span class="desc">An agent that learns to recover from failure. A seeded chaos proxy injects 16 API and device faults into every MCP tool; recoveries are written as <code>SKILL.md</code> files and kept only if they win an A/B rerun under the same faults. Solved 12/13 real GitHub tasks under moderate chaos; under heavy chaos, faults recovered rose from 18% to 48% after learning.</span>
     </li>
     <li>
