@@ -57,52 +57,33 @@
     </li>
   </ul>
 
-  <h2>At failproof ai</h2>
-  <p class="meta">Founding Engineer, Jul 2026 – present. TypeScript, Rust, ClickHouse, PostgreSQL, Kubernetes.</p>
-  <ul class="plain">
+  <h2>Work</h2>
+  <ul class="plain dated">
     <li>
-      <span class="item-title">Two-tier semantic policy evaluation.</span>
-      Regex policies stay as hard blocks; a second stage sends 15 judgment-heavy policies
-      to a model-based reviewer, opt-in locally (bring your own key) or via a rate-limited,
-      fail-open Cloud endpoint. Replayed over 16.8k real tool calls: block rate fell from
-      33.3% to 7.4% while attacks caught rose from 77 to 123.
+      <span class="date">2026–now</span>
+      <span>
+        <span class="item-title">failproof ai</span>, Founding Engineer
+        <ul class="bullets">
+          <li>Built a two-tier policy evaluator: regex hard blocks plus a model-based semantic stage. On 16.8k real tool calls, block rate fell from 33.3% to 7.4% while attacks caught rose from 77 to 123.</li>
+          <li>Integrated 6 agent CLIs (Hermes, OpenClaw, Goose, Devin CLI, Factory Droid, Antigravity) into a 39-policy runtime engine covering 12 harnesses.</li>
+          <li>Own the daemon-to-cloud protocol: signed policy bundles, at-least-once spool-and-ack event delivery, and policy backtesting over ClickHouse.</li>
+          <li>Built an internal fleet of autonomous Rust/Codex agents for PR review, issue-to-PR, and production alerting into Slack.</li>
+        </ul>
+      </span>
     </li>
     <li>
-      <span class="item-title">Agent harness integrations.</span>
-      Hooked the tool-call lifecycle of Hermes, OpenClaw, Goose, Devin CLI, Factory Droid
-      and Antigravity into a 39-policy block / sanitize / instruct engine that now covers
-      12 harnesses. Verified against live CLIs rather than docs, which caught schema and
-      timeout-unit bugs the published specs missed.
+      <span class="date">2026</span>
+      <span>
+        <span class="item-title">BG THub</span>, Backend Development Intern
+        <span class="desc meta">Conversational agent for a mobility aggregator; Firebase backend integration; vendor API audit against India's DPDP Act 2023.</span>
+      </span>
     </li>
     <li>
-      <span class="item-title">Transcript collector, in Rust.</span>
-      Session ingestion for 12 agent CLIs inside the daemon: JSONL tailers, a SQLite poller
-      with message-id dedup (removing 2–4× duplicate events), and a backward-compatible
-      epoch hook for sources with no timestamps.
-    </li>
-    <li>
-      <span class="item-title">Daemon-to-cloud protocol.</span>
-      Signed policy bundles, cursor-based spool-and-ack delivery for at-least-once event
-      shipping, and version-safe rollout; policy packs pinned to commit SHAs.
-    </li>
-    <li>
-      <span class="item-title">Evaluation infrastructure.</span>
-      Policy backtesting that replays historical tool calls out of ClickHouse against
-      candidate policies before rollout, and automated eval generation on an isolated
-      Kubernetes eval pod that pushes results back to the server.
-    </li>
-    <li>
-      <span class="item-title">Integration canary.</span>
-      A daily CI canary that runs harmless probes against every supported agent CLI,
-      version-gates reruns, and reports pass / fail / inconclusive to Slack.
-    </li>
-    <li>
-      <span class="item-title">Internal agents and alerting.</span>
-      A fleet of autonomous Rust/Codex agents in locked-down, budget-capped containers:
-      PR review that boots each PR's full stack and drives it with Playwright, issue-to-PR
-      automation, canary failure diagnosis, and a production-alert agent that digests
-      errors and policy denials into Slack twice a day. The fleet runs under failproof ai's
-      own tracing.
+      <span class="date">2026</span>
+      <span>
+        <span class="item-title">All India Organization of Pensioners</span>, Web Developer Intern
+        <span class="desc meta">Accessibility-first grievance portal for elderly users, serving 1,250+ monthly users on Cloudflare.</span>
+      </span>
     </li>
   </ul>
 
