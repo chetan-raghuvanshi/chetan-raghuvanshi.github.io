@@ -5,8 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chetan Raghuvanshi</title>
   <meta name="description" content="Chetan Raghuvanshi: founding engineer at failproof ai, building runtime policy enforcement, evaluators and infrastructure for AI coding agents.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chetan-raghuvanshi.github.io/">
   <meta property="og:title" content="Chetan Raghuvanshi">
-  <meta property="og:description" content="Founding engineer at failproof ai. Agent runtimes, guardrails, evals.">
+  <meta property="og:description" content="Founding Engineer at failproof ai. Runtime guardrails for AI coding agents.">
+  <meta property="og:image" content="https://chetan-raghuvanshi.github.io/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@chhhee10">
+  <meta name="twitter:image" content="https://chetan-raghuvanshi.github.io/og.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='Georgia,serif'>c.</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,17 +35,14 @@
   </p>
 
   <p>
-    I work on the layer between AI coding agents and the machines they run on. At
-    failproof ai that means intercepting an agent's tool calls at runtime and deciding,
-    in milliseconds, whether to block, sanitize, or redirect them, and then building the
-    collectors, evaluators and cloud protocol that make those decisions measurable and
-    deployable across every installed machine.
+    I build runtime guardrails for AI coding agents at failproof ai: deciding, in
+    milliseconds, which tool calls get through, and shipping those decisions to every
+    machine an agent runs on.
   </p>
   <p>
-    Outside work I build agent systems: self-hosted multi-agent dev platforms, agents
-    that learn recovery skills under injected faults, and tooling for navigating agent
-    sessions. I'm also finishing my undergrad in Computer Science at Sir M. Visvesvaraya
-    Institute of Technology, Bengaluru.
+    On the side I build agent systems: self-hosted dev platforms, agents that learn to
+    recover from failure, and tools for working across agent sessions. I'm also finishing
+    my CS undergrad at Sir M. Visvesvaraya Institute of Technology, Bengaluru.
   </p>
 
   <h2>News</h2>
@@ -99,48 +104,44 @@
   </ul>
 
   <h2>Projects</h2>
-  <ul class="plain">
+  <ul class="plain dated">
     <li>
-      <a class="item-title" href="https://github.com/Vijeta-Patel/Monk">Monk</a>
-      <span class="meta">· TypeScript</span>
-      <span class="desc">An agent that learns to recover from failure. A seeded chaos proxy injects 16 API and device faults into every MCP tool; recoveries are written as <code>SKILL.md</code> files and kept only if they win an A/B rerun under the same faults. Solved 12/13 real GitHub tasks under moderate chaos; under heavy chaos, faults recovered rose from 18% to 48% after learning.</span>
+      <span class="date">Oct 2026</span>
+      <span>
+        <a class="item-title" href="https://github.com/chhhee10/kiln">kiln</a> <span class="meta">· Rust</span>
+        <span class="desc meta">Self-hosted, multi-tenant agentic dev platform. A daemon schedules tasks through Planner → Builder → QA → Reviewer in isolated Docker containers and ends each in a PR with QA evidence. Shared "company brain" on LanceDB + DataFusion; TUI and Leptos/Tauri clients for desktop and Android.</span>
+      </span>
     </li>
     <li>
-      <a class="item-title" href="https://github.com/chhhee10/kiln">kiln</a>
-      <span class="meta">· Rust</span>
-      <span class="desc">Self-hosted, multi-tenant agentic dev platform. A daemon schedules tasks through Planner → Builder → QA → Reviewer in isolated Docker containers and ends each in a PR with QA evidence. Shared "company brain" on LanceDB + DataFusion; TUI and Leptos/Tauri clients for desktop and Android; MCP endpoint with OAuth 2.1.</span>
+      <span class="date">Sep 2026</span>
+      <span>
+        <a class="item-title" href="https://github.com/Vijeta-Patel/Monk">Monk</a> <span class="meta">· TypeScript</span>
+        <span class="desc meta">An agent that learns to recover from failure. A seeded chaos proxy injects 16 API and device faults into every MCP tool; recoveries become <code>SKILL.md</code> files kept only if they win an A/B rerun. Solved 12/13 real GitHub tasks under chaos; faults recovered rose from 18% to 48% after learning.</span>
+      </span>
     </li>
     <li>
-      <a class="item-title" href="https://github.com/chhhee10/braid">braid</a>
-      <span class="meta">· Go</span>
-      <span class="desc">Turns forked Claude Code sessions into a navigable, queryable graph: <code>tree</code>, <code>cd</code>, <code>read</code>, headless <code>ask</code> against any session (hash-verified, never mutates it), pull-based merges and an append-only shared ledger. Local-first, single static binary.</span>
+      <span class="date">Aug 2026</span>
+      <span>
+        <a class="item-title" href="https://github.com/chhhee10/braid">braid</a> <span class="meta">· Go</span>
+        <span class="desc meta">Turns forked Claude Code sessions into a navigable, queryable graph: <code>tree</code>, <code>cd</code>, <code>read</code>, headless <code>ask</code> against any session without mutating it, pull-based merges and a shared ledger. Local-first, single static binary.</span>
+      </span>
     </li>
     <li>
-      <a class="item-title" href="https://github.com/chhhee10/swarmhands">SwarmHands</a>
-      <span class="meta">· Python · 1st place, OpenSwarm Hackathon</span>
-      <span class="desc">A personal agent mesh driven from Telegram (text or locally transcribed voice). A tool-less coordinator fans out parallel specialists: GitHub via per-agent git worktrees, the phone via adb (calls, WhatsApp, relaying SMS OTPs to the laptop), and vision-guided web tasks.</span>
+      <span class="date">Jul 2026</span>
+      <span>
+        <a class="item-title" href="https://github.com/chhhee10/swarmhands">SwarmHands</a> <span class="meta">· Python · 1st place, OpenSwarm Hackathon</span>
+        <span class="desc meta">A personal agent mesh driven from Telegram. A tool-less coordinator fans out parallel specialists: GitHub via per-agent git worktrees, the phone via adb (calls, WhatsApp, relaying SMS OTPs), and vision-guided web tasks.</span>
+      </span>
     </li>
     <li>
-      <a class="item-title" href="https://github.com/chhhee10/PullSmith">PullSmith</a>
-      <span class="meta">· Python · team project · 2nd place, Anvil Hackathon</span>
-      <span class="desc">HMAC-verified GitHub webhooks trigger a 7-agent PR pipeline: typed plan, multi-hop research, parallel review and security scans, generated tests in a sandbox with up to 3 self-healing attempts, then a rule-checked merge / reject / file-bug decision. Live progress over SSE. Built in 24 hours.</span>
-    </li>
-    <li>
-      <a class="item-title" href="https://github.com/chhhee10/DeepMind-Hack">Munim</a>
-      <span class="meta">· Python</span>
-      <span class="desc">A self-configuring operating system for small businesses over WhatsApp / Telegram. ~10 agents over shared durable state: Hindi/Hinglish voice intake, UPI-screenshot verification, bounded price negotiation, and SELECT-only NL-to-SQL on whitelisted tables. Phrasings seen once compile into local skills, so repeats cost zero API calls.</span>
-    </li>
-    <li>
-      <a class="item-title" href="https://github.com/chhhee10/VAULTLESS">Vaultless</a>
-      <span class="meta">· Rust, TypeScript · team project · <a href="https://vaultless-sys.vercel.app">demo</a></span>
-      <span class="desc">Passwordless auth from behaviour: keystroke and IMU features, z-score normalised and cosine-matched, feed a fuzzy extractor that rebuilds an Ed25519 key in memory. Only helper data lives on-chain (Solana/Anchor). A duress band silently opens a decoy wallet under coercion.</span>
-    </li>
-    <li>
-      <a class="item-title" href="https://github.com/chhhee10/Caveat">Caveat</a>
-      <span class="meta">· Python · team project</span>
-      <span class="desc">Contract risk analysis: a 7-agent LangGraph pipeline for risk classification, DPDP / GDPR / RBI compliance checks, cross-document contradiction detection and redline drafting, plus a Chrome extension for consumers.</span>
+      <span class="date">May 2026</span>
+      <span>
+        <a class="item-title" href="https://github.com/chhhee10/PullSmith">PullSmith</a> <span class="meta">· Python · 2nd place, Anvil Hackathon</span>
+        <span class="desc meta">GitHub webhooks trigger a 7-agent PR pipeline: plan, research, parallel review and security scans, sandboxed tests with self-healing retries, then a rule-checked merge / reject decision. Built in 24 hours.</span>
+      </span>
     </li>
   </ul>
+  <p><a href="https://github.com/chhhee10?tab=repositories">More on GitHub →</a></p>
 
   <footer>Last updated November 2026.</footer>
 
