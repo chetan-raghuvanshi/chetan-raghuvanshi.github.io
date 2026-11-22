@@ -64,10 +64,10 @@
       <span>
         <span class="item-title">failproof ai</span>, Founding Engineer
         <ul class="bullets">
-          <li>Built a two-tier policy evaluator: regex hard blocks plus a model-based semantic stage. On 16.8k real tool calls, block rate fell from 33.3% to 7.4% while attacks caught rose from 77 to 123.</li>
-          <li>Integrated 6 agent CLIs (Hermes, OpenClaw, Goose, Devin CLI, Factory Droid, Antigravity) into a 39-policy runtime engine covering 12 harnesses.</li>
-          <li>Own the daemon-to-cloud protocol: signed policy bundles, at-least-once spool-and-ack event delivery, and policy backtesting over ClickHouse.</li>
-          <li>Built an internal fleet of autonomous Rust/Codex agents for PR review, issue-to-PR, and production alerting into Slack.</li>
+          <li>Cut false blocks by 4.5× (33.3% → 7.4%) while catching 60% more attacks (77 → 123) by adding a model-based semantic stage behind regex hard blocks, measured on 16.8k real agent tool calls.</li>
+          <li>Shipped runtime enforcement for 6 agent CLIs (Hermes, OpenClaw, Goose, Devin CLI, Factory Droid, Antigravity), taking the 39-policy engine to 12 harnesses; tested against live CLIs, catching bugs their own specs missed.</li>
+          <li>Own the daemon-to-cloud protocol that puts policy on every installed machine: signed policy bundles, at-least-once spool-and-ack event delivery, and backtesting over ClickHouse before any rollout.</li>
+          <li>Built an autonomous agent fleet (Rust + Codex, sandboxed and budget-capped) that reviews PRs by booting the full stack and driving it with Playwright, turns issues into PRs, and triages production errors into twice-daily Slack alerts.</li>
         </ul>
       </span>
     </li>
@@ -75,14 +75,22 @@
       <span class="date">2026</span>
       <span>
         <span class="item-title">BG THub</span>, Backend Development Intern
-        <span class="desc meta">Conversational agent for a mobility aggregator; Firebase backend integration; vendor API audit against India's DPDP Act 2023.</span>
+        <ul class="bullets">
+          <li>Architected an AI conversational agent for a mobility aggregator: intent routing, backend API contracts and session-state management over REST microservices.</li>
+          <li>Replaced hand-rolled auth with Firebase (Auth, Firestore, Cloud Functions), adding real-time sync across the logistics backend.</li>
+          <li>Audited 5+ third-party vendor APIs against India's DPDP Act 2023 to set the integration roadmap.</li>
+        </ul>
       </span>
     </li>
     <li>
       <span class="date">2026</span>
       <span>
         <span class="item-title">All India Organization of Pensioners</span>, Web Developer Intern
-        <span class="desc meta">Accessibility-first grievance portal for elderly users, serving 1,250+ monthly users on Cloudflare.</span>
+        <ul class="bullets">
+          <li>Built and shipped a full-stack grievance portal (React, Node.js, TypeScript) serving 1,250+ monthly users and 17.6k+ requests/month on Cloudflare.</li>
+          <li>Set up zero-downtime CI/CD with GitHub Actions.</li>
+          <li>Designed a WCAG-compliant UI for elderly users: high contrast, adaptive navigation, minimal interaction depth.</li>
+        </ul>
       </span>
     </li>
   </ul>
